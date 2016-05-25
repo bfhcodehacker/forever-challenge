@@ -12,6 +12,18 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+
+# pagination
+gem 'will_paginate', '~> 3.1.0'
+
+# devise for users
+gem 'devise'
+
+# active model serializers for json data
+gem 'active_model_serializers', '~> 0.10.0'
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'

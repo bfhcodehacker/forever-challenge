@@ -1,0 +1,20 @@
+<div class="albums">
+  <div class="container">
+    <div class="header">
+      <span>Albums</span>
+    </div>
+    <div class="row">
+      <div class="pages">
+        <%= will_paginate @albums %>
+      </div>
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+      <% @albums.each do |album| %>
+        <div class="col-sm-6 box">
+          <div class="title"><%= link_to album["name"], album_path(album["id"]) %></div>
+          <div class="date"><%= album["average_date"] %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

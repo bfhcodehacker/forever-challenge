@@ -1,0 +1,21 @@
+<div class="album">
+  <div class="title"><%= @album[:name] %></div>
+  <div class="count">Photo Count: <%= @album[:num_photos] %></div>
+  <div class="container">
+    <% @photos.each do |photo| %>
+      <div class="col-sm-3 picture-box">
+        <div class="pic">
+          <%= image_tag(photo["url"]) %>
+        </div>
+        <div class="data">
+          <div class="name"><%= photo["name"] %></div>
+          <div class="description"><%= photo["description"] %></div>
+          <div class="date"><%= photo["taken_at"] %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="back">
+    <a href="/">Back</a>
+  </div>
+</div>
